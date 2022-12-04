@@ -13,8 +13,6 @@ const SignInRegisterLayout = () => {
   }
 
   return (
-    // This is the layout for the sign in and register pages 
-    //with the image social-media-welcome.jpg on the left and the form on the right
     <Container maxWidth="lg">
       <Stack
         py={6}
