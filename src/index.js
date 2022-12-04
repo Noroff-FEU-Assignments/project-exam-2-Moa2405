@@ -7,7 +7,6 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { light, dark } from './theme/theme';
 import { BrowserRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from "react-query";
-// import { ReactQueryDevtoolsPanel } from 'react-query/devtools'
 
 const queryClient = new QueryClient();
 

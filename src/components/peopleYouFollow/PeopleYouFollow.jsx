@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
@@ -40,7 +39,7 @@ const PeopleYouFollow = () => {
               <Link key={index} to={`/user/${user.name}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <Stack direction="row" spacing={2} alignItems="center">
                   {user.avatar === null || user.avatar === "" ?
-                    <Avatar {...stringAvatar} sx={{ height: 25, width: 25 }} /> :
+                    <Avatar {...stringAvatar(user.name)} sx={{ height: 25, width: 25 }} /> :
                     <Avatar src={user.avatar} sx={{ height: 25, width: 25 }} />}
                   <Typography>
                     {user.name}
@@ -55,39 +54,6 @@ const PeopleYouFollow = () => {
   } else {
     return null;
   }
-}
-
-
-
-//   return (
-//     <>
-//       {PeopleYouFollow && peopleYouFollow.length !== 0 ? <Paper elevation={2} width="100%" sx={{ p: 2 }}>
-//         <Stack spacing={3}>
-//           <Typography color="textSecondary">
-//             People you follow
-//           </Typography>
-//           <Stack spacing={2}>
-//             {peopleYouFollow.map((user, index) => (
-//               <Link key={index} to={`/user/${user.name}`} style={{ textDecoration: "none", color: "inherit" }}>
-//                 <Stack direction="row" spacing={2} alignItems="center">
-//                   {user.avatar === null || user.avatar === "" ?
-//                     <Avatar {...stringAvatar} sx={{ height: 25, width: 25 }} /> :
-//                     <Avatar src={user.avatar} sx={{ height: 25, width: 25 }} />}
-//                   <Typography>
-//                     {user.name}
-//                   </Typography>
-//                 </Stack>
-//               </Link>
-//             ))}
-//           </Stack>
-//         </Stack>
-//       </Paper> : null}
-//     </>
-//   );
-// }
-
-PeopleYouFollow.propTypes = {
-  peopleYouFollow: PropTypes.array
 }
 
 export default PeopleYouFollow;
