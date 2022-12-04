@@ -30,9 +30,8 @@ This project is a social media app bootstrapped with [Create React App](https://
 - Material Design MUI
 - React Hooks 
 - React Context 
-- React Query 
-- React Icons
-- React Emoji Picker
+- React Query
+- Emoji Picker
 - Infinite Scroll
 - Axios
 - Use Form
