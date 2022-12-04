@@ -119,11 +119,12 @@ const EditPost = ({ post, closeMenu }) => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
     borderRadius: "10px",
     border: "2px solid",
     borderColor: theme.palette.mode === "dark" ? theme.palette.grey[800] : theme.palette.grey[500],
     padding: "1rem",
+    width: "100%",
+    maxWidth: "500px",
   };
 
   return (
