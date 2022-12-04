@@ -30,7 +30,8 @@ import ErrorAlert from "../../alert/ErrorAlert";
 const schema = yup.object().shape({
   title: yup.string().required("This field is required").max(280, "Title must be less than 280 characters"),
   body: yup.string().max(280, "Message must be less than 280 characters"),
-  media: yup.string().url("Must be a valid url").matches(/^$|^https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp|bmp|tiff|tif|svg|svgz)(?:\?.*)?$/, "Must be a valid image url"),
+  media: yup.string().url("Must be a valid url")
+  // media: yup.string().url("Must be a valid url").matches(/^$|^https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp|bmp|tiff|tif|svg|svgz)(?:\?.*)?$/, "Must be a valid image url"),
 });
 
 const CreatePost = () => {
@@ -74,7 +75,8 @@ const CreatePost = () => {
     }
   }
 
-  //remove keys in object were value is empty string and remove keys in object if value is empty array
+  //remove keys in object were value is empty string and 
+  //remove keys in object if value is empty array
   const formatData = (obj) => {
     Object.keys(obj).forEach(key => {
       if (obj[key] && typeof obj[key] === "object") formatData(obj[key]);
@@ -87,7 +89,6 @@ const CreatePost = () => {
 
     const postData = { ...data, tags };
     const newObject = formatData(postData);
-    console.log(newObject);
 
     fetchData({
       method: "POST",

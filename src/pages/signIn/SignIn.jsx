@@ -5,12 +5,13 @@ import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useAuth } from '../../context/authContext'
 import url from "../../common/url";
-import { Alert, Box, Divider, Stack, TextField, Typography } from "@mui/material";
+import { Box, Divider, Stack, TextField, Typography } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
 import { useAxiosHook } from "../../hooks/useAxiosHook";
 import { useTheme } from "@mui/system";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
+import ErrorAlert from "../../components/alert/ErrorAlert";
 
 const schema = yup.object().shape({
   email: yup.string().required("This field is required").email("Must be a valid email").matches(/stud.noroff.no$|noroff.no$/, "Must be a @stud.noroff.no or @noroff.no email"),
@@ -113,7 +114,7 @@ const SignIn = () => {
         <LoadingButton sx={{ mt: 2 }} type="submit" loading={loading} variant="contained" color="primary">
           Sign in
         </LoadingButton>
-        {error && <Alert sx={{ mt: 2 }} severity="error">{error[0].message}</Alert>}
+        {error && <ErrorAlert />}
         <Divider>Or</Divider>
         <Stack direction="row" justifyContent="center" spacing={1}>
           <Typography variant="body2">

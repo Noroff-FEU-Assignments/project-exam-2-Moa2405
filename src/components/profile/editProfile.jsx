@@ -171,7 +171,7 @@ const EditProfile = ({ setProfileImages }) => {
             >
               {/* mui textfield for banner */}
               <Stack spacing={2} direction="column" width="100%">
-                <img src={previewBannerImg} alt="preview" style={{ objectFit: "cover" }} height="100px" width="100%" />
+                <img src={previewBannerImg} alt=" " style={{ objectFit: "cover" }} height="100px" width="100%" />
                 <Controller
                   name="banner"
                   control={control}

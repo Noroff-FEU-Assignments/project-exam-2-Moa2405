@@ -12,10 +12,10 @@ export const light = {
   palette: {
     mode: "light",
     primary: {
-      main: "#58C190",
-      light: "#A2EFCB",
-      dark: "#54CE95",
-      contrastText: "#000000",
+      main: "#007fff",
+      light: "#4BA5FF",
+      dark: "#006BD8",
+      contrastText: "#FFFFFF",
     },
     secondary: {
       main: "#FFFFFF",
@@ -57,10 +57,10 @@ export const dark = {
   palette: {
     mode: "dark",
     primary: {
-      main: "#6CF0B2",
-      light: "#A2EFCB",
-      dark: "#54CE95",
-      contrastText: "#000000",
+      main: "#007fff",
+      light: "#4BA5FF",
+      dark: "#006BD8",
+      contrastText: "#FFFFFF",
     },
     secondary: {
       main: "#FFFFFF",
