@@ -14,7 +14,6 @@ const Tags = ({ tags }) => {
     return tag;
   });
 
-
   const color = theme.palette.mode === "dark" ? "primary" : "contrastText";
 
   return (

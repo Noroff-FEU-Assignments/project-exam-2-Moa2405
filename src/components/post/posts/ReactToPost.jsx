@@ -70,7 +70,7 @@ const ReactToPost = ({ postId, reactions }) => {
   return (
     <>
       <Popper sx={{ zIndex: "1000" }} id={id} open={open} anchorEl={anchorEl} placement="top-start">
-        <EmojiPicker width={250} lazyLoadEmojis={true} onEmojiClick={handleReactOnPicker} theme="dark" />
+        <EmojiPicker width={250} searchDisabled lazyLoadEmojis={true} onEmojiClick={handleReactOnPicker} theme="dark" />
       </Popper>
       <Stack direction="row" alignItems="center" spacing={2} pr={2} pl={1} py={1}>
         <IconButton aria-label="React with emoji" onClick={handleClick}>
