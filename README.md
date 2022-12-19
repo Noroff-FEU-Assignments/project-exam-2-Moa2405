@@ -1,5 +1,7 @@
 # Social Media app
 
+![image](/public/Skjermbilde-2022-12-19.png)
+
 This project is a social media app bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Live Demo
